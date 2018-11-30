@@ -1,0 +1,255 @@
+
+/*Aplicamos la fuente para todo el contenido*/
+* {
+    font-family: 'Dancing Script', cursive;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth
+}
+body{
+  background: #02010a;
+}
+
+.contenido{
+  width: 900px;
+  margin: 0 auto;
+}
+
+/*Header y menu*/
+header {
+  animation: entrada 1.5s;
+  background-color: #5b7989;
+  padding: 1vh 1vw;
+  border-radius: 10px 10px 0 0;
+}
+/* sombra para todas las imagenes*/
+img {
+  box-shadow: 2px 2px 0px 0px #02010a;
+}
+
+.contenedor-menu {
+  overflow: hidden;
+  padding: 20px;
+
+}
+.contenedor-menu h1 {
+  color: white;
+  text-shadow: 2px 2px #02010a;
+  display: inline;
+}
+
+.menu {
+  float: right;
+}
+
+.menu a {
+  float: left;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 10px;
+}
+.menu a:hover{
+  background-color: #ddd;
+  color: black;
+}
+.menu a.activo {
+  background-color: dodgerblue;
+  color: white;
+}
+/*fin header y menu*/
+
+/*Imagen central*/
+.central {
+  background-color: #82c3a6;
+  text-align: center;
+  padding: 20px;
+}
+
+#imagen-principal {
+  width: 100%;
+}
+/*fin imagen central*/
+
+/*Imagenes secundarias*/
+.contenedor-flex{
+  padding: 25px;
+  background-color: #d5c75f;
+  display: flex;
+  text-align: center;
+}
+.contenedor-flex img {
+    border: 1px solid;
+}
+.imagen-izq{
+  width: 50%;
+}
+.imagen-izq img {
+  transition: transform 1s ease-in-out;
+}
+.imagen-der{
+  width: 50%;
+}
+.imagen-der img {
+  transition: transform 1s ease-in-out;
+}
+#redimensional {
+  width: 70%;
+}
+
+/**************efectos de imagenes */
+.imagen-izq img:hover{
+  transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  border: 2px solid;
+  -webkit-box-shadow: 3px 3px 5px 0px #82c3a6;
+  -moz-box-shadow: 3px 3px 5px 0px #82c3a6;
+  box-shadow: 3px 3px 5px 0px #82c3a6;
+
+}
+.imagen-der img:hover{
+  transform: translate(20px,-5px);
+  border: 2px solid;
+  -webkit-box-shadow: 3px 3px 5px 0px #82c3a6;
+  -moz-box-shadow: 3px 3px 5px 0px #82c3a6;
+  box-shadow: 3px 3px 5px 0px #82c3a6;
+
+}
+/*fin imagenes secundarias*/
+
+/*footer*/
+.fila {
+  background-color: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.columna {
+  padding: 10px;
+  float: left;
+  width: 25%;
+  text-align: left;
+}
+.columna img:hover {
+  transform: scale(2,2);
+}
+
+.columna a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fila::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*fin de footer*/
+
+/*------------------------------------------------------------------------*/
+
+/*pagina retratos y paisajes*/
+.contenedor-galeria {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: DodgerBlue;
+  align-items: center;
+  overflow: hidden;
+}
+.contenedor-galeria > div {
+  width: 30%;
+  flex-grow: 1;
+  flex: 1 1 30%;
+  margin: 10px;
+}
+.contenedor-galeria img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 90%;
+}
+/*animaciones de las imagenes*/
+.galeria1 {
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+.pares {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.galeria3 {
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+}
+
+/* fin de las paginas Paisajes y retratos*/
+
+/*Desarrollamos la visibilidad en diferentes dispositivos*/
+@media screen and (max-width: 900px) {
+  .contenido{
+    width: 100%;
+  }
+  .contenedor-menu {
+    text-align: center;
+  }
+  .menu {
+    float: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedor-menu h1 {
+    /*font-size: 30px;*/
+    font-size: 6vw; /*Me gusta mas que sea fija, pero en este caso
+    lo adaptamos al viewport*/
+  }
+  .contenedor-flex{
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 10px
+  }
+  .imagen-der, .imagen-izq {
+    width: auto !important;
+  }
+  #redimensional {
+    width: 90%;
+    height: auto;
+  }
+  .columna {
+    width: 100%;
+  }
+  .contenedor-galeria{
+    flex-direction: column;
+  }
+  .contenedor-galeria div {
+    display: block;
+    width: 90%;
+    height: 90%;
+  }
+  .contenedor-galeria img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+/* Efecto Slide up */
+@keyframes entrada {
+    0% {
+        margin-top: 150%
+    }
+    60% {
+        margin-top: -15%;
+    }
+    100% {
+      margin-top: 0%;
+    }
+}
