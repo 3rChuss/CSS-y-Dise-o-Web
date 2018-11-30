@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Importamos una fuente de google font para estilizar el texto -->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <title>Web de Fotografía - Evaluación Final CSS y Diseño Web Responsive</title>
+  </head>
+  <body>
+    <div class="contenido">
+      <header id="inicio">
+        <div class="contenedor-menu">
+            <h1>Comenzando con la fotografía</h1>
+            <div class="menu">
+              <a class="activo" href="#inicio">Inicio</a>
+              <a href="paisajes.html">Paisajes</a>
+              <a href="retratos.html">Retratos</a>
+          </div>
+        </div>
+      </header>
+      <section>
+        <!-- imagen central -->
+        <div class="central">
+          <img id="imagen-principal" src="images/foto_principal.png" alt="Pantano de la Peza - Copyright - Jesus Abril">
+        </div>
+
+        <!-- imagenes secundarias -->
+        <div class="contenedor-flex">
+          <div class="imagen-izq">
+            <a href="paisajes.html"><img id="redimensional" src="images/imagen-izq.JPG" alt="Imagen izquierda"><p>Paisajes</p></a>
+          </div>
+          <div class="imagen-der">
+            <a href="retratos.html"><img id="redimensional" src="images/imagen-der.JPG" alt="Imagen derecha"><p>Retratos</p></a>
+          </div>
+        </div>
+      </section>
+      <!--Footer-->
+      <footer>
+        <div class="fila">
+          <div class="columna">
+            <h3>Contacto</h3>
+            17252 Sant Antoni de Calonge <br/>
+            <a href="tel:+34622085454">622085454 <br/>
+            <a href="mailto:jesus.abrilm@gmail.com">jesus.abrilm@gmail.com</a> <br/>
+          </div>
+          <div class="columna">
+            <h3>Terminos</h3>
+            Estos son los terminos <br/> y condiciones
+          </div>
+            <div class="columna">
+              <h3>Siguéme en:</h3>
+                <a href="#"><img src="images/instagram.png" alt="instagram"></a>
+                <a href="#"><img src="images/facebook.png" alt="facebook"></a>
+                <a href="#"><img src="images/twiter.png" alt="twiter"></a>
+                <a href="#"><img src="images/youtube.png" alt="youtube"></a>
+                <a href="#"><img src="images/linkedin.png" alt="linkedin"></a>
+          </div>
+          <div class="columna">
+            <h3>Derechos</h3>
+            Jesus Mª Abril Miñan <br/>
+            Copyright © 2018 <br/>
+            <a href="#inicio"><strong>Volver a inicio</strong></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
